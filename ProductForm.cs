@@ -43,17 +43,9 @@ namespace Project1
                     return;
 
                 }
-                Random random = new Random();
-                int Idnumber = random.Next(minValue: 1, maxValue: 1000);
+                
 
-                Product product = new Product();
-                product.Id = Idnumber;
-                product.Name = Name_textBox.Text;
-                product.BrandName = BrandName_textBox.Text;
-                product.count = int.Parse(Count_textBox.Text);
-                product.Price = decimal.Parse(Price_textBox.Text);
-                product.IsActive = IsActive_checkBox.Checked;
-                product.Creationdate = DateTime.Now;
+                Product product = new Product(name: Name_textBox.Text,brandName: BrandName_textBox.Text,price: decimal.Parse(Price_textBox.Text),count: int.Parse(Count_textBox.Text));
 
             }
             catch(Exception ex)
